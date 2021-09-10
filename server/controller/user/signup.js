@@ -36,7 +36,7 @@ const signup = async (request, response) => {
     response.cookie(
       'authorization',
       token,
-      { maxAge: '30d' },
+      { maxAge: 1000 * 60 * 60 * 24 * 1 },
       { httpOnly: true }
     );
 
