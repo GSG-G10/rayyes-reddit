@@ -5,7 +5,8 @@ const connectionString = process.env.DB_URL;
 
 const pool = new Pool({
   connectionString,
-  max: process.env.DB_MAX_CONNECTIONS || 2
+  max: process.env.DB_MAX_CONNECTIONS || 2,
+  ssl: process.env.NODE_ENV === 'production'
 });
 
 module.exports = pool;

@@ -1,6 +1,7 @@
 BEGIN;
 
-DROP TABLE IF EXISTS users, posts, comments;
+DROP TABLE IF EXISTS users, posts, comments, votes;
+DROP TYPE IF EXISTS vote;
 
 CREATE TABLE users (
     id SERIAL PRIMARY KEY,

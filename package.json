@@ -4,7 +4,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server/index.js",
+    "start": "NODE_ENV=production & node server/index.js",
     "dev": "nodemon server/index.js",
     "db:build": "node server/database/build_script.js"
   },
