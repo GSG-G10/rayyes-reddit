@@ -1,0 +1,299 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+
+  html {
+    font-family: sans-serif;
+  }
+
+  .body {
+    background-color: #dae0e6;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  .nav {
+    height: 3.5rem;
+    padding: 0 1.25rem;
+    width: 100%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    background-color: white;
+  }
+
+  .logo-container {
+    height: 100%;
+    align-items: center;
+    display: inline-flex;
+    vertical-align: baseline;
+  }
+
+  .logo-image {
+    width: 2rem;
+    height: 36px;
+    padding: 0.5rem 0.5rem 0.5rem 0;
+  }
+
+  .logo-text {
+    height: 18px;
+  }
+
+  .logout-btns,
+  .login-btns {
+    display: inline-flex;
+    align-items: center;
+    vertical-align: baseline;
+  }
+
+  .logout-btns button,
+  .login-btns button {
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 0.875rem;
+    font-weight: 700;
+    width: 7.5rem;
+    min-height: 2rem;
+    min-width: 2rem;
+    padding: 0.25rem 1rem;
+    position: relative;
+    border-radius: 9999px;
+    cursor: pointer;
+  }
+
+  .post-cancel,
+  .logout-btn,
+  .login-btn {
+    border: 1px solid #0079d3;
+    color: #0079d3;
+    background-color: white;
+  }
+
+  .signup-btn {
+    margin-left: 1rem;
+    background-color: #0079d3;
+    color: white;
+    border: none;
+  }
+
+  .modal-container {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    background-color: #00000080;
+  }
+
+  .close-modal {
+    content: 'X';
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    font-size: 1rem;
+    color: black;
+    font-weight: 700;
+    background-color: #cdc8c8;
+    border-radius: 999px;
+    height: 2rem;
+    width: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1px;
+    cursor: pointer;
+  }
+
+  .post-modal {
+    max-height: 100%;
+    height: 30rem;
+    width: 40rem;
+    background-color: white;
+    padding: 3rem;
+    overflow: auto;
+    box-sizing: border-box;
+  }
+
+  .login-modal,
+  .signup-modal {
+    max-height: 100%;
+    height: 35rem;
+    width: 40rem;
+    background-color: white;
+    padding: 4rem;
+    overflow: auto;
+    box-sizing: border-box;
+  }
+
+  .post-form,
+  .login-form,
+  .signup-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100%;
+    max-width: 100%;
+    margin: auto;
+  }
+
+  .login-form,
+  .signup-form {
+    width: 17.5rem;
+  }
+
+  .post-form input,
+  .post-form textarea,
+  .login-form input,
+  .signup-form input {
+    font-size: 14px;
+    font-weight: 400;
+    outline: 0;
+    width: 100%;
+    padding: 22px 12px 10px;
+    border: 1px solid #0000001a;
+    border-radius: 4px;
+    background-color: #fcfcfb;
+    margin-bottom: 0.5rem;
+    box-sizing: border-box;
+    resize: none;
+  }
+
+  .login-form label,
+  .signup-form label {
+    margin-bottom: 0.5rem;
+  }
+
+  .post-submit,
+  .post-cancel,
+  .login-submit,
+  .signup-submit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    vertical-align: baseline;
+    border-radius: 999px;
+    text-align: center;
+    cursor: pointer;
+    font-size: 0.875rem;
+    font-weight: 700;
+    height: 2.5rem;
+    min-height: 2.1875rem;
+    max-width: 24.5rem;
+    min-width: 9.6875rem;
+    padding: 0 1rem;
+    margin-top: 0.5rem;
+  }
+
+  .login-submit,
+  .signup-submit {
+    width: 100%;
+  }
+
+  .post-cancel {
+    margin-right: 1rem;
+  }
+
+  .post-submit,
+  .login-submit,
+  .signup-submit {
+    color: white;
+    background-color: #0079d3;
+    border: none;
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  .main-container {
+    display: flex;
+    justify-content: center;
+    padding: 20px 24px;
+  }
+
+  .posts-section {
+    width: 640px;
+  }
+
+  .profile-pic {
+    border-radius: 50%;
+    background-color: #d7dfe2;
+  }
+
+  .create-post {
+    vertical-align: baseline;
+    background-color: white;
+    border-radius: 0.25rem;
+    border: 1px solid #ccc;
+    display: flex;
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+  }
+
+  .posts-profile-link {
+    border: 1px solid #edeff1;
+    -ms-flex-preferred-size: 38px;
+    flex-basis: 38px;
+    margin-right: 8px;
+    border-radius: 50%;
+    width: 38px;
+    height: 38px;
+  }
+
+  .create-post input {
+    margin: 0;
+    font: inherit;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+    font-family: inherit;
+    border-radius: 4px;
+    box-shadow: none;
+    box-sizing: border-box;
+    color: #1c1c1c;
+    display: block;
+    flex-grow: 1;
+    height: 38px;
+    margin-right: 8px;
+    outline: none;
+    padding: 0 16px;
+    background-color: #f6f7f8;
+    border: 1px solid #edeff1;
+  }
+
+  .post-btns {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: flex-end;
+  }
+.post-img{
+    max-height: 500px;
+    max-width: 500px;
+}
+
+.post-title{
+    font-size: 20px;
+}
+
+.post-div{
+    display: flex;
+    flex-direction: column;
+    border:1px ;
+    border-bottom: thin;
+    padding-bottom: 5px;
+}
+.sidebar{
+    max-width: 5%;
+
+}

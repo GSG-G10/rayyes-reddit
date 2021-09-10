@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Reddit</title>
+    </head>
+  <body class="body">
+    <nav class="nav">
+      <div class="logo-container">
+        <img src="/assets/logo-img.svg" alt="" class="logo-image" />
+        <img src="/assets/logo-text.svg" alt="" class="logo-text" />
+      </div>
+      <div class="login-btns" id="login-btns">
+        <button class="login-btn" onclick="showLoginModal()">Log In</button>
+        <button class="signup-btn" onclick="showSignupModal()">Sign Up</button>
+      </div>
+      <div class="logout-btns hidden" id="logout-btns">
+        <button class="logout-btn" onclick="logout()">Log Out</button>
+      </div>
+    </nav>
+
+    <!-- TODO: sidebar -->
+    <aside></aside>
+    <div class="main-container">
+      <!-- posts -->
+      <section class="posts-section">
+        <!-- create post -->
+        <div class="create-post">
+          <a class="posts-profile-link" href="/profile">
+            <img
+              src="/assets/profile-pic.svg"
+              alt="profile picture"
+              class="profile-pic"
+            />
+          </a>
+          <input
+            type="text"
+            name="createPost"
+            class=""
+            placeholder="Create Post"
+            onclick="showNewPostModal()"
+          />
+        </div>
+        <!-- posts list -->
+        <div id="posts"></div>
+      </section>
+    </div>
+
+    <footer></footer>
+
+    <!-- Modal -->
+    <div class="modal-container hidden" id="modal-container">
+      <span class="close-modal" onclick="closeModal()">X</span>
+      <!-- signup -->
+      <div class="signup-modal hidden" id="signup-modal">
+        <form id="signup-form" class="signup-form">
+          <label for="signup-username">Username:</label>
+          <input type="text" name="user_name" id="signup-username" />
+          <label for="signup-email">Email:</label>
+          <input type="email" name="email" id="signup-email" />
+          <label for="signup-password">Password:</label>
+          <input type="password" name="password" id="signup-password" />
+          <label for="signup-confirm-pass">Confirm password:</label>
+          <input type="password" name="confirm-pass" id="signup-confirm-pass" />
+          <!-- TODO: show error message -->
+          <span class="error-message hidden" id="signup-error-message"></span>
+          <button type="submit" class="signup-submit">Continue</button>
+        </form>
+      </div>
+      <!-- login -->
+      <div class="login-modal hidden" id="login-modal">
+        <form id="login-form" class="login-form">
+          <label for="login-email">Email:</label>
+          <input type="email" name="email" id="login-email" />
+          <label for="login-password">Password:</label>
+          <input type="password" name="password" id="login-password" />
+          <!-- TODO: show error message -->
+          <span class="error-message hidden" id="login-error-message"></span>
+          <button type="submit" class="login-submit">Continue</button>
+        </form>
+      </div>
+      <!-- new post -->
+      <div class="post-modal hidden" id="post-modal">
+        <form id="post-form" class="post-form">
+          <!-- <label for="Title">Title:</label> -->
+          <input type="text" name="title" id="post-title" placeholder="Title" />
+          <!-- <label for="content">Text:</label> -->
+          <textarea
+            type="text"
+            name="content"
+            id="post-content"
+            placeholder="Text (optional)"
+            cols="30"
+            rows="10"
+          ></textarea>
+          <!-- <label for="image">Image:</label> -->
+          <input
+            type="text"
+            name="img"
+            id="post-img"
+            placeholder="Image URL (optional)"
+          />
+          <div class="post-btns">
+            <button type="button" class="post-cancel" onclick="cancelPost()">
+              Cancel
+            </button>
+            <button type="submit" class="post-submit">Post</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
